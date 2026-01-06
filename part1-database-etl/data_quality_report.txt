@@ -1,0 +1,144 @@
+
+DATA QUALITY REPORT
+
+Project: FlexiMart Data Architecture
+Phase: ETL and Data Cleaning
+Prepared by: Prakruti Hakke
+
+---
+
+1. INTRODUCTION
+
+---
+
+This Data Quality Report documents the issues identified in the raw
+FlexiMart datasets and the corrective actions applied during the
+ETL (Extract, Transform, Load) process.
+
+The objective of this phase was to ensure that all data loaded into the
+MySQL database is accurate, consistent, reliable, and free from
+referential integrity issues.
+
+---
+
+2. DATASETS REVIEWED
+
+---
+
+## Dataset Name            Description
+
+customers_raw.csv       Customer personal and registration data
+products_raw.csv        Product catalog information
+sales_raw.csv           Sales transactions and order details
+
+---
+
+3. DATA QUALITY ISSUES AND FIXES
+
+---
+
+## CUSTOMERS DATA
+
+Issues Identified:
+
+* Duplicate customer records
+* Same email appearing multiple times
+* Inconsistent phone number formats
+* Phone numbers with spaces, dashes, or missing country code
+* Missing email addresses
+* Multiple date formats such as:
+  15/04/2023, 2023-04-15, 04-15-2023
+
+Actions Taken:
+Issue                        Fix Applied
+----------------------------------------
+
+Duplicate customers          Removed duplicates using email
+Phone inconsistency          Standardized to +91-XXXXXXXXXX
+Missing email                Rows removed
+Date format mismatch         Converted using pandas to_datetime()
+
+Result:
+
+* Cleaned and deduplicated customer records
+* Only valid customer records loaded into the database
+
+---
+
+## PRODUCTS DATA
+
+Issues Identified:
+
+* Missing product prices
+* Inconsistent category naming
+  (electronics, Electronics, ELECTRONICS)
+* Missing stock quantities
+* Duplicate product IDs
+
+Actions Taken:
+Issue                        Fix Applied
+----------------------------------------
+
+Missing price                Replaced with median price
+Category inconsistency       Capitalized category values
+Missing stock quantity       Set stock to 0
+Duplicate products           Retained unique product IDs
+
+Result:
+
+* Uniform and standardized product catalog
+* Safe default values for pricing and inventory
+
+---
+
+## SALES DATA
+
+Issues Identified:
+
+* Duplicate sales transactions
+* Missing customer or product references
+* Multiple order date formats
+* Invalid foreign key references
+
+Actions Taken:
+Issue                        Fix Applied
+----------------------------------------
+
+Duplicate sales              Removed duplicate rows
+Missing customer/product     Skipped invalid records
+Date inconsistency           Converted to standard DATE format
+Foreign key violations       Verified existence before insert
+
+Result:
+
+* Only valid sales records loaded
+* No foreign key constraint violations occurred
+
+---
+
+4. DATA QUALITY SUMMARY
+
+---
+
+## Dataset        Raw Rows           Cleaned Rows
+
+Customers      Initial count      Deduplicated count
+Products       Initial count      Cleaned count
+Sales          Initial count      Valid transactions
+
+All cleaned datasets were successfully loaded into the MySQL database.
+
+---
+
+5. CONCLUSION
+
+---
+
+The ETL process significantly improved data quality by eliminating
+duplicates, resolving inconsistencies, standardizing formats, and
+removing invalid references.
+
+The FlexiMart dataset is now analytics-ready, production-safe, and
+suitable for reporting and business intelligence use cases.
+
+---
