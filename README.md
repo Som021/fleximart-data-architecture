@@ -1,6 +1,6 @@
-FlexiMart Data Engineering Project
+# FlexiMart Data Engineering Project
 
-Project Overview
+## Project Overview
 This repository contains a complete end-to-end data engineering solution for the FlexiMart retail system.  
 The project demonstrates practical implementation of:
 
@@ -14,7 +14,7 @@ The project is divided into three structured parts, each focusing on a different
 
 ---
 
-Repository Structure
+## Repository Structure
 
 fleximart-data-architecture/
 ├── data/ # Raw input datasets
@@ -29,23 +29,25 @@ fleximart-data-architecture/
 ├── README.md # Root documentation
 └── .gitignore
 
+yaml
+Copy code
 
 ---
 
-Project Parts Summary
+## Project Parts Summary
 
- 🔹 Part 1 — Database & ETL
+### 🔹 Part 1 — Database & ETL
 - Cleaned raw CSV data
 - Designed relational schema
 - Implemented ETL pipeline in Python
 - Ensured data quality and integrity
 
- 🔹 Part 2 — NoSQL (MongoDB)
+### 🔹 Part 2 — NoSQL (MongoDB)
 - Designed product catalog using JSON
 - Performed MongoDB CRUD and aggregations
 - Compared NoSQL vs SQL use cases
 
- 🔹 Part 3 — Data Warehouse
+### 🔹 Part 3 — Data Warehouse
 - Designed Star Schema
 - Built fact and dimension tables
 - Loaded warehouse data
@@ -53,7 +55,7 @@ Project Parts Summary
 
 ---
 
- Technologies Used
+## Technologies Used
 - Python (Pandas, MySQL Connector)
 - MySQL
 - MongoDB
@@ -61,4 +63,3 @@ Project Parts Summary
 - JavaScript (MongoDB Shell)
 
 ---
-
