@@ -31,37 +31,38 @@ fleximart-data-architecture/
 └── .gitignore
 ```
 
-yaml
-Copy code
-
 ---
 
 ## Project Parts Summary
 
 ### 🔹 Part 1 — Database & ETL
+```
 - Cleaned raw CSV data
 - Designed relational schema
 - Implemented ETL pipeline in Python
 - Ensured data quality and integrity
-
+```
 ### 🔹 Part 2 — NoSQL (MongoDB)
+```
 - Designed product catalog using JSON
 - Performed MongoDB CRUD and aggregations
 - Compared NoSQL vs SQL use cases
-
+```
 ### 🔹 Part 3 — Data Warehouse
+```
 - Designed Star Schema
 - Built fact and dimension tables
 - Loaded warehouse data
 - Executed analytical SQL queries
-
+```
 ---
 
 ## Technologies Used
+```
 - Python (Pandas, MySQL Connector)
 - MySQL
 - MongoDB
 - SQL
 - JavaScript (MongoDB Shell)
-
+```
 ---
