@@ -6,7 +6,7 @@ import re
 db = mysql.connector.connect(
     host="localhost",
     user="root",
-    password="$oham778",
+    password=PASSWORD FOR LOCAL MYSQL,
     database="fleximart"
 )
 cursor = db.cursor()
@@ -141,3 +141,4 @@ with open(r"C:\Users\soham\OneDrive\Desktop\studentID-fleximart-data-architectur
     f.write("\n".join(report))
 
 print("ETL Completed Successfully")
+
