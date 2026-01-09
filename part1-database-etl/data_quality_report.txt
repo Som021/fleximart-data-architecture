@@ -3,7 +3,7 @@ DATA QUALITY REPORT
 
 Project: FlexiMart Data Architecture
 Phase: ETL and Data Cleaning
-Prepared by: Prakruti Hakke
+Prepared by: Soham Ghamandi
 
 ---
 
@@ -142,3 +142,4 @@ The FlexiMart dataset is now analytics-ready, production-safe, and
 suitable for reporting and business intelligence use cases.
 
 ---
+
