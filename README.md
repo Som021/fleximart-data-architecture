@@ -16,6 +16,7 @@ The project is divided into three structured parts, each focusing on a different
 
 ## Repository Structure
 
+```
 fleximart-data-architecture/
 ├── data/ # Raw input datasets
 │ ├── customers_raw.csv
@@ -28,6 +29,7 @@ fleximart-data-architecture/
 │
 ├── README.md # Root documentation
 └── .gitignore
+```
 
 yaml
 Copy code
